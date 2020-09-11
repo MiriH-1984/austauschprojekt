@@ -1,0 +1,198 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 268435456 bytes for Failed to commit area from 0x0000000700e00000 to 0x0000000710e00000 of length 268435456.
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (./src/hotspot/os/windows/os_windows.cpp:3303), pid=48448, tid=44136
+#
+# JRE version:  (11.0.7+10) (build )
+# Java VM: OpenJDK 64-Bit Server VM (11.0.7+10-b944.20, mixed mode, sharing, tiered, compressed oops, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: com.intellij.util.ReadEnv C:\Users\MIRIRE~1\AppData\Local\Temp\intellij-cmd-env.6057163448428546559.tmp
+
+Host: Intel(R) Core(TM) i7-4770 CPU @ 3.40GHz, 8 cores, 15G,  Windows 10 , 64 bit Build 18362 (10.0.18362.959)
+Time: Fri Sep 11 19:30:56 2020 Mitteleuropäische Sommerzeit elapsed time: 0 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000002c6287dd800):  JavaThread "Unknown thread" [_thread_in_vm, id=44136, stack(0x000000c8c6000000,0x000000c8c6100000)]
+
+Stack: [0x000000c8c6000000,0x000000c8c6100000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x5ddcca]
+V  [jvm.dll+0x7115d5]
+V  [jvm.dll+0x712b2d]
+V  [jvm.dll+0x7131e3]
+V  [jvm.dll+0x23e3a8]
+V  [jvm.dll+0x5db184]
+V  [jvm.dll+0x5d0305]
+V  [jvm.dll+0x2fb2ab]
+V  [jvm.dll+0x2fb21a]
+V  [jvm.dll+0x2fb0f2]
+V  [jvm.dll+0x2fffd6]
+V  [jvm.dll+0x3485d3]
+V  [jvm.dll+0x348cd6]
+V  [jvm.dll+0x3486d3]
+V  [jvm.dll+0x2d5b38]
+V  [jvm.dll+0x2d6cd7]
+V  [jvm.dll+0x6f05d7]
+V  [jvm.dll+0x6f1dcc]
+V  [jvm.dll+0x355b89]
+V  [jvm.dll+0x6d43ae]
+V  [jvm.dll+0x3bdc13]
+V  [jvm.dll+0x3bfe61]
+C  [jli.dll+0x5363]
+C  [ucrtbase.dll+0x20e82]
+C  [KERNEL32.DLL+0x17bd4]
+C  [ntdll.dll+0x6ce51]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x000002c626647e80, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+  0x000002c6287f5800 GCTaskThread "GC Thread#0" [stack: 0x000000c8c6100000,0x000000c8c6200000] [id=39536]
+  0x000002c628850000 ConcurrentGCThread "G1 Main Marker" [stack: 0x000000c8c6200000,0x000000c8c6300000] [id=40788]
+  0x000002c628851800 ConcurrentGCThread "G1 Conc#0" [stack: 0x000000c8c6300000,0x000000c8c6400000] [id=47192]
+
+[error occurred during error reporting (printing all threads), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007fff671e61a7]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x000002c6287d8a90] Heap_lock - owner thread: 0x000002c6287dd800
+
+Heap address: 0x0000000700e00000, size: 4082 MB, Compressed Oops mode: Non-zero based: 0x0000000700e00000
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (2 events):
+Event: 0.057 Loaded shared library G:\PyCharm Community Edition 2020.2\jbr\bin\zip.dll
+Event: 0.063 Loaded shared library G:\PyCharm Community Edition 2020.2\jbr\bin\jimage.dll
+
+
+Dynamic libraries:
+0x00007ff786490000 - 0x00007ff78649a000 	G:\PyCharm Community Edition 2020.2\jbr\bin\java.exe
+0x00007fffbbbc0000 - 0x00007fffbbdb0000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007fffbab70000 - 0x00007fffbac22000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007fffb8b90000 - 0x00007fffb8e34000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007fffb8ef0000 - 0x00007fffb8fea000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007fffb3b40000 - 0x00007fffb3b57000 	G:\PyCharm Community Edition 2020.2\jbr\bin\VCRUNTIME140.dll
+0x00007fffb3b00000 - 0x00007fffb3b19000 	G:\PyCharm Community Edition 2020.2\jbr\bin\jli.dll
+0x00007fffbb730000 - 0x00007fffbb8c5000 	C:\WINDOWS\System32\USER32.dll
+0x00007fffb9970000 - 0x00007fffb9991000 	C:\WINDOWS\System32\win32u.dll
+0x00007fffbb8e0000 - 0x00007fffbb906000 	C:\WINDOWS\System32\GDI32.dll
+0x00007fffad470000 - 0x00007fffad6f4000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.18362.1016_none_9e7a36bbe461dae4\COMCTL32.dll
+0x00007fffb97b0000 - 0x00007fffb9946000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007fffba800000 - 0x00007fffba89e000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007fffb9b40000 - 0x00007fffb9bde000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007fffb9c40000 - 0x00007fffb9f75000 	C:\WINDOWS\System32\combase.dll
+0x00007fffba9e0000 - 0x00007fffbab00000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007fffb8b10000 - 0x00007fffb8b90000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007fffbb470000 - 0x00007fffbb49e000 	C:\WINDOWS\System32\IMM32.DLL
+0x00007fff8c120000 - 0x00007fff8c1bd000 	G:\PyCharm Community Edition 2020.2\jbr\bin\msvcp140.dll
+0x00007fff66f00000 - 0x00007fff679bb000 	G:\PyCharm Community Edition 2020.2\jbr\bin\server\jvm.dll
+0x00007fffba6b0000 - 0x00007fffba753000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007fffba760000 - 0x00007fffba7f7000 	C:\WINDOWS\System32\sechost.dll
+0x00007fffbb650000 - 0x00007fffbb658000 	C:\WINDOWS\System32\PSAPI.DLL
+0x00007fffb5390000 - 0x00007fffb53b4000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007fffb3390000 - 0x00007fffb339a000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007fffb5360000 - 0x00007fffb538d000 	C:\WINDOWS\SYSTEM32\winmmbase.dll
+0x00007fffae2a0000 - 0x00007fffae2a9000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007fffb99a0000 - 0x00007fffb99ea000 	C:\WINDOWS\System32\cfgmgr32.dll
+0x00007fffbb660000 - 0x00007fffbb6cf000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007fffb8ad0000 - 0x00007fffb8ae1000 	C:\WINDOWS\System32\kernel.appcore.dll
+0x00007fffb53e0000 - 0x00007fffb53f1000 	G:\PyCharm Community Edition 2020.2\jbr\bin\verify.dll
+0x00007fffad890000 - 0x00007fffada84000 	C:\WINDOWS\SYSTEM32\DBGHELP.DLL
+0x00007fffa0f20000 - 0x00007fffa0f4a000 	C:\WINDOWS\SYSTEM32\dbgcore.DLL
+0x00007fffb4920000 - 0x00007fffb4949000 	G:\PyCharm Community Edition 2020.2\jbr\bin\java.dll
+0x00007fffb3ac0000 - 0x00007fffb3ad8000 	G:\PyCharm Community Edition 2020.2\jbr\bin\zip.dll
+0x00007fffb53d0000 - 0x00007fffb53db000 	G:\PyCharm Community Edition 2020.2\jbr\bin\jimage.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;G:\PyCharm Community Edition 2020.2\jbr\bin;C:\WINDOWS\SYSTEM32;C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.18362.1016_none_9e7a36bbe461dae4;G:\PyCharm Community Edition 2020.2\jbr\bin\server
+
+VM Arguments:
+java_command: com.intellij.util.ReadEnv C:\Users\MIRIRE~1\AppData\Local\Temp\intellij-cmd-env.6057163448428546559.tmp
+java_class_path (initial): G:\PyCharm Community Edition 2020.2\lib\util.jar
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 4                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 2                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 8                                         {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 1048576                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 268435456                                 {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 4280287232                                {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 1048576                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 5836300                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122910970                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122910970                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+     bool UseCompressedClassPointers               = true                                 {lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                                 {lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags
+ #1: stderr all=off uptime,level,tags
+
+Environment Variables:
+PATH=G:\Documents\arbeit\python\austauschprojekt\venv\Scripts;C:\Program Files\Microsoft MPI\Bin\;C:\Python36\Scripts\;C:\Python36\;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Razer Chroma SDK\bin;C:\Program Files\Razer Chroma SDK\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\;C:\Program Files\Microsoft SQL Server\140\Tools\Binn\;C:\Program Files\Microsoft SQL Server\140\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\ManagementStudio\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;G:\Git\cmd;C:\Program Files\Java\jdk-10.0.1\bin;C:\Users\Miri Rechner\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Miri Rechner\AppData\Local\Microsoft\WindowsApps;C:\Users\Miri Rechner\AppData\Local\GitHubDesktop\bin
+USERNAME=Miri Rechner
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 60 Stepping 3, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10 , 64 bit Build 18362 (10.0.18362.959)
+OS uptime: 10 days 22:34 hours
+
+CPU:total 8 (initial active 8) (4 cores per cpu, 2 threads per core) family 6 model 60 stepping 3, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2, fma
+
+Memory: 4k page, system-wide physical 16322M (5917M free)
+TotalPageFile size 47437M (AvailPageFile size 67M)
+current process WorkingSet (physical memory assigned to process): 10M, peak: 10M
+current process commit charge ("private bytes"): 60M, peak: 316M
+
+vm_info: OpenJDK 64-Bit Server VM (11.0.7+10-b944.20) for windows-amd64 JRE (11.0.7+10-b944.20), built on Jul 11 2020 03:30:56 by "" with MS VC++ 14.0 (VS2015)
+
+END.
